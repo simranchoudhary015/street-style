@@ -28,7 +28,7 @@ function Login() {
 
     
       if (userEmail === adminEmail) {
-        window.location.href = "http://localhost:5173/";
+        window.location.href = "https://street-style-admin.onrender.com";
       } else {
         navigate('/home')
       }
