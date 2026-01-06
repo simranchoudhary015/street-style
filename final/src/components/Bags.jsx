@@ -21,7 +21,7 @@ function Bags() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5500/api/product/fetchproducts?category=bags"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=bags"
         );
         setProducts(response.data.addproducts);
       } catch (error) {

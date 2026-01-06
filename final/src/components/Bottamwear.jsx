@@ -22,7 +22,7 @@ function Bottamwear(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5500/api/product/fetchproducts?category=bottamwear"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=bottamwear"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
