@@ -1,0 +1,145 @@
+.cart-page {
+  padding: 30px 0;
+}
+
+.cart-title {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.cart-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT */
+.cart-left {
+  flex: 3;
+}
+
+/* RIGHT */
+.cart-right {
+  flex: 1;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-right h4 {
+  margin-bottom: 15px;
+}
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #eaeaea;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  background: #fff;
+}
+
+.cart-img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.cart-details {
+  flex: 1;
+}
+
+.price {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* QTY */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qty button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* REMOVE */
+.remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* FORM */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* SUMMARY */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+/* CHECKOUT */
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.address-box input,
+.address-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.address-box textarea {
+  resize: none;
+  height: 70px;
+}
+
+.address-row {
+  display: flex;
+  gap: 10px;
+}
+
+.address-warning {
+  color: red;
+  font-size: 13px;
+  margin-top: 8px;
+}
