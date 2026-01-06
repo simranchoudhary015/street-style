@@ -117,7 +117,6 @@ function Secondheader(){
     <div class="account-dropdown">
       <Link to="/">Login</Link>
       <Link to="/orders">Orders</Link>
-      <Link to="/coupons">Coupons</Link>
       <a onClick={handleLogout}>Logout</a>
     </div>
   </div>

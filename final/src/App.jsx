@@ -7,7 +7,6 @@ import Secondheader from './components/Secondheader.jsx'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import Login from './components/Login.jsx'
-import Coupons from './components/Coupons.jsx'
 import Orders from './components/Orders.jsx'
 import Croptop from './components/Croptop.jsx'
 import Bottamwear from './components/Bottamwear.jsx'
@@ -38,7 +37,6 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/dresses' element={<Dresses />} />
             <Route path='/croptop' element={<Croptop />} />
-            <Route path='/coupons' element={<Coupons />} />
             <Route path='/bottamwear' element={<Bottamwear />} />
             <Route path='/jumpsuit' element={<Jumpsuit />} />
             <Route path='/bags' element={<Bags />} />
@@ -57,7 +55,7 @@ function App() {
           </Routes>
           <Footer />
         </CartProvider>
-      </BrowserRouter>
+        </BrowserRouter>
 
     </>
   )
