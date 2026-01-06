@@ -1,6 +1,6 @@
 import winter from '../assets/winter.png'
 import topsunder from '../assets/topsunder.png'
-import print from '../assets/print.png'
+import print from '../assets/Print.png'
 import leather from '../assets/leather.png'
 import hoodies from '../assets/hoodies.png'
 import summer from '../assets/summer.png'
