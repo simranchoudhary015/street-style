@@ -10,7 +10,7 @@ function Orders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5500/api/orders")
+      .get("https://street-style-shop-server.onrender.com/api/orders")
       .then((res) => setOrders(res.data));
   }, []);
 

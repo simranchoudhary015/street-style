@@ -7,7 +7,7 @@ function Products() {
   const [products, setProducts] = useState([]);
   async function fetchProducts() {
       const data = await axios.get(
-        "http://localhost:5500/api/product/fetchproducts"
+        "https://street-style-shop-server.onrender.com/api/product/fetchproducts"
       );
       console.log(data.data.addproducts);
       setProducts(data.data.addproducts);
@@ -15,7 +15,7 @@ function Products() {
   useEffect(() => {
     async function fetchProducts() {
       const data = await axios.get(
-        "http://localhost:5500/api/product/fetchproducts"
+        "https://street-style-shop-server.onrender.com/api/product/fetchproducts"
       );
       console.log(data.data.addproducts);
       setProducts(data.data.addproducts);
@@ -24,7 +24,7 @@ function Products() {
   }, []);
   const handleDelete=async(id)=>{
     try {
-      await axios.delete(`http://localhost:5500/api/product/delete/${id}`)
+      await axios.delete(`https://street-style-shop-server.onrender.com/api/product/delete/${id}`)
       console.log("product deleted")
       fetchProducts()
     } catch (error) {
@@ -88,7 +88,7 @@ function Products() {
                 <td>{products.location}</td>
                 <td>
                   <img
-                    src={`http://localhost:5500/uploads/${products.image}`}
+                    src={`https://street-style-shop-server.onrender.com/uploads/${products.image}`}
                     alt="product"
                     width="60"
                     height="60"

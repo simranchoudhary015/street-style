@@ -19,7 +19,7 @@ function Leathercollection(){
         const fetchProducts = async () => {
           try {
             const response = await axios.get(
-              "http://localhost:5500/api/product/fetchproducts?category=leathercollection"
+              "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=leathercollection"
             );
             setProducts(response.data.addproducts);
           } catch (error) {

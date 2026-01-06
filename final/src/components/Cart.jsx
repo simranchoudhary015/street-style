@@ -44,7 +44,7 @@ const Cart = () => {
       console.log("ORDER PAYLOAD 👉", payload);
 
       await axios.post(
-        "http://localhost:5500/api/orders",
+        "https://street-style-shop-server.onrender.com/api/orders",
         payload,
         {
           headers: {

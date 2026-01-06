@@ -21,7 +21,7 @@ function Croptop(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5500/api/product/fetchproducts?category=croptop"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=croptop"
         );
         setProducts(response.data.addproducts);
       } catch (error) {

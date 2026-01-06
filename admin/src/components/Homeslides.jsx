@@ -9,7 +9,7 @@ function Homeslides(){
           const [banners, setBanners] = useState([]);
           async function fetchBanners() {
               const data = await axios.get(
-                "http://localhost:5500/api/banner/fetchbanners"
+                "https://street-style-shop-server.onrender.com/api/banner/fetchbanners"
               );
               console.log(data.data)
               setBanners(data.data.addbanners);
@@ -17,7 +17,7 @@ function Homeslides(){
           useEffect(() => {
             async function fetchBanners() {
               const data = await axios.get(
-                "http://localhost:5500/api/banner/fetchbanners"
+                "https://street-style-shop-server.onrender.com/api/banner/fetchbanners"
               );
               console.log(data.data)
               setBanners(data.data.addbanners);
@@ -26,7 +26,7 @@ function Homeslides(){
           }, []);
            const handleDelete=async(id)=>{
     try {
-      await axios.delete(`http://localhost:5500/api/banner/delete/${id}`)
+      await axios.delete(`https://street-style-shop-server.onrender.com/api/banner/delete/${id}`)
       console.log("banner deleted")
       fetchBanners()
     } catch (error) {

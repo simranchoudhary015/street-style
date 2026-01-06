@@ -19,7 +19,7 @@ function Wintercollection(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5500/api/product/fetchproducts?category=wintercollection"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=wintercollection"
         );
         setProducts(response.data.addproducts);
       } catch (error) {

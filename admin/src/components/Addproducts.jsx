@@ -20,7 +20,7 @@ function Addproducts() {
     const formData = new FormData(formRef.current);  
 
     const response = await axios.post(
-      "http://localhost:5500/api/product/add-product",
+      "https://street-style-shop-server.onrender.com/api/product/add-product",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },

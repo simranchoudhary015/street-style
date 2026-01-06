@@ -41,7 +41,7 @@ function Login() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5500/api/user/signup", {
+      await axios.post("https://street-style-shop-server.onrender.com/api/user/signup", {
         username,
         phone,
         email,
