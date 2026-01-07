@@ -21,11 +21,16 @@ import NeckpiecesEaring from './components/NeckpiecesEaring.jsx'
 import Handaccessories from './components/Handaccessories.jsx'
 import WomenEthnicWear from './components/WomenEthnicWear.jsx'
 import Leathercollection from './components/Leathercollection.jsx'
+import Blackdresses from './components/Blackdresses.jsx'
 import Twoinone from './components/Twoinone.jsx'
 import Hoodies from './components/Hoodies.jsx'
+import Coordsets from './components/Coordsets.jsx'
+import Bodycondresses from './components/Bodycondresses.jsx'
+import Sneakers from './components/Sneakers.jsx'
 import { CartProvider } from "./context/CartContext";
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart";
+
 function App() {
 
   return (
@@ -54,6 +59,10 @@ function App() {
             <Route path='/twoinone' element={<Twoinone/>}/>
             <Route path='/hoodies' element={<Hoodies/>}/>
             <Route path='/leathercollection' element={<Leathercollection />} />
+            <Route path='/blackdresses' element={<Blackdresses/>} />
+            <Route path='/coordsets' element={<Coordsets/>}/>
+            <Route path='/bodycondresses' element={<Bodycondresses/>}/>
+            <Route path='/sneakers' element={<Sneakers/>}/>
             <Route path='/orders' element={<Orders />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<Wishlist />} />

@@ -86,12 +86,13 @@ function Addproducts() {
                 <option value="hairaccessories">Hairaccessories</option>
                 <option value="womenEthnicWear">WomenEthnicWear</option>
                 <option value="twoinone">Twoinone</option>
+                <option value="blackdresses">Blackdresses</option>
                 <option value="leathercollection">Leathercollection</option>
                 <option value="hoodies">Hoodies</option>
-                <option value="cordset">Cordset</option>
+                <option value="coordsets">Coordsets</option>
                 <option value="shorts">Shorts</option>
-                <option value="bodycondress">Bodycondress</option>
-                <option value="printedcollection">Printedcollection</option>
+                <option value="bodycondresses">Bodycondresses</option>
+                <option value="sneakers">Sneakers</option>
               </select>
             </div>
 

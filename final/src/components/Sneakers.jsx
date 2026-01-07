@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dresses.css";
-import { Link } from "react-router-dom";
-function WomenEthnicWear(){
+import { useCart } from "../context/CartContext";
+function Sneakers(){
     const [products, setProducts] = useState([]);
       const [selectedProduct, setSelectedProduct] = useState(null);
+     const [selectedSize, setSelectedSize] = useState(null);
+      const { addToCart, addToWishlist } = useCart();
     
       const openProduct = (product) => {
         setSelectedProduct(product);
+        setSelectedSize(null); // reset size when modal opens
       };
     
       const closeProduct = () => {
         setSelectedProduct(null);
+        setSelectedSize(null);
       };
     
+   
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=womenEthnicWear"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=slipers"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
@@ -29,6 +34,16 @@ function WomenEthnicWear(){
 
     fetchProducts();
   }, []);
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+   addToCart(selectedProduct, selectedSize, 1);
+
+    closeProduct();
+  };
     return(
         <>
         <div className="products-container">
@@ -79,7 +94,7 @@ function WomenEthnicWear(){
             <div className="row">
               <div className="col-6">
              <img
-              src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
+              src={`http://localhost:5500/uploads/${selectedProduct.image}`}
               alt={selectedProduct.name}
               width="300"
             />
@@ -97,19 +112,40 @@ function WomenEthnicWear(){
              <hr />
              <h6>SELECT SIZE</h6>
              <div className="size-grid">
-          {selectedProduct.size?.split(",").map((s, i) => (
-            <button key={i} className="size-btn">{s}</button>
-          ))}
-        </div>
-             <div className="action-buttons">
-          <button className="wishlist-btn" onClick={() => addToWishlist(selectedProduct)}>
-            🤍 Wishlist
-          </button>
+                  {selectedProduct.size?.split(",").map((s, i) => (
+                    <button
+                      key={i}
+                      className={`size-btn ${
+                        selectedSize === s ? "active" : ""
+                      }`}
+                      onClick={() => setSelectedSize(s)}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
 
-          <button className="cart-btn" onClick={() => addToCart(selectedProduct)}>
-            Add to Cart
-          </button>
-        </div>
+                <div className="action-buttons">
+                  <button
+                    className="wishlist-btn"
+                    onClick={() => addToWishlist(selectedProduct)}
+                  >
+                    🤍 Wishlist
+                  </button>
+
+                  <button
+                    className="cart-btn"
+                    onClick={handleAddToCart}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+
+                {!selectedSize && (
+                  <p className="size-warning">
+                    Please select a size
+                  </p>
+                )}
             </div>
             </div>
 
@@ -119,6 +155,5 @@ function WomenEthnicWear(){
       )}
         </>
     )
-
 }
-export default WomenEthnicWear
+export default Sneakers

@@ -1,40 +1,39 @@
 import React, { useEffect, useState } from "react";
+import { useCart } from "../context/CartContext";
 import axios from "axios";
 import "./Dresses.css";
-import { useCart } from "../context/CartContext";
-function Shoes(){
+
+function Bodycondresses() {
   const [products, setProducts] = useState([]);
-    const [selectedProduct, setSelectedProduct] = useState(null);
-   const [selectedSize, setSelectedSize] = useState(null);
-    const { addToCart, addToWishlist } = useCart();
-  
-    const openProduct = (product) => {
-      setSelectedProduct(product);
-      setSelectedSize(null); // reset size when modal opens
-    };
-  
-    const closeProduct = () => {
-      setSelectedProduct(null);
-      setSelectedSize(null);
-    };
-  
-  
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const { addToCart, addToWishlist } = useCart();
+
+  const openProduct = (product) => {
+    setSelectedProduct(product);
+    setSelectedSize(null); // reset size when modal opens
+  };
+
+  const closeProduct = () => {
+    setSelectedProduct(null);
+    setSelectedSize(null);
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=shoes"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=bodycondresses"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     };
-
     fetchProducts();
   }, []);
-   const handleAddToCart = () => {
+
+  const handleAddToCart = () => {
     if (!selectedSize) {
       alert("Please select a size");
       return;
@@ -44,17 +43,17 @@ function Shoes(){
 
     closeProduct();
   };
-    return(
-        <>
-        <div className="products-container">
+
+  return (
+    <>
+      <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
             <div className="card" key={index}>
               <img
                 src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
                 alt={product.name}
-                width="280"
-                height="300"
+                className="pimg"
                 onClick={() => openProduct(product)}
                 style={{ cursor: "pointer" }}
               />
@@ -74,7 +73,9 @@ function Shoes(){
                     <span className="oldp">₹{product.oldPrice}</span>
                   )}
                   {product.discount && (
-                    <small className="smalltext">({product.discount}%)</small>
+                    <small className="smalltext">
+                      ({product.discount}%)
+                    </small>
                   )}
                 </p>
               </div>
@@ -82,36 +83,56 @@ function Shoes(){
           ))
         ) : (
           <p style={{ textAlign: "center", marginTop: "50px" }}>
-            No products found
+            No dresses found
           </p>
         )}
       </div>
 
-      {/* Modal */}
+      {/* MODAL */}
       {selectedProduct && (
         <div className="modal-overlay">
           <div className="modal-content">
             <div className="row">
-              <div className="col-6">
-             <img
-              src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
-              alt={selectedProduct.name}
-              width="300"
-            />
+              <div className="col-sm-12 col-lg-6">
+                <img
+                  src={`http://localhost:5500/uploads/${selectedProduct.image}`}
+                  alt={selectedProduct.name}
+                  width="300"
+                />
               </div>
-              <div className="col-6">
+
+              <div className="col-sm-12 col-lg-6">
                 <button className="close-btn" onClick={closeProduct}>
-              ✖
-            </button>
-            <h3>{selectedProduct.name}</h3>
-            <p>{selectedProduct.description}</p>
-            <p className="ratings">{selectedProduct.rating}<span className="pink-star">★</span> | 8.9k Ratings</p>
-            <hr />
-           <div className="p d-flex gap-2"><h4>₹{selectedProduct.price}</h4> <p className="oldp">MRP ₹{selectedProduct.oldPrice}</p> <small className="smalltext">({selectedProduct.discount}%)</small></div> 
-             <small>inclusive of all taxes</small>
-             <hr />
-             <h6>SELECT SIZE</h6>
-             <div className="size-grid">
+                  ✖
+                </button>
+
+                <h3>{selectedProduct.name}</h3>
+                <p>{selectedProduct.description}</p>
+
+                <p className="ratings">
+                  {selectedProduct.rating}
+                  <span className="pink-star">★</span> | 8.9k Ratings
+                </p>
+
+                <hr />
+
+                <div className="p d-flex gap-2">
+                  <h4>₹{selectedProduct.price}</h4>
+                  <p className="oldp">
+                    MRP ₹{selectedProduct.oldPrice}
+                  </p>
+                  <small className="smalltext">
+                    ({selectedProduct.discount}%)
+                  </small>
+                </div>
+
+                <small>inclusive of all taxes</small>
+
+                <hr />
+
+                <h6>SELECT SIZE</h6>
+
+                <div className="size-grid">
                   {selectedProduct.size?.split(",").map((s, i) => (
                     <button
                       key={i}
@@ -146,14 +167,13 @@ function Shoes(){
                     Please select a size
                   </p>
                 )}
+              </div>
             </div>
-            </div>
-
-          
           </div>
         </div>
       )}
-        </>
-    )
+    </>
+  );
 }
-export default Shoes
+
+export default Bodycondresses;

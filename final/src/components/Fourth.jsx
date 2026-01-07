@@ -38,7 +38,7 @@ function Fourth(){
                                     <div className="card">
                           <img src={"https://cdn.streetstylestore.com/2/8/9/1/1/5/289115-vertical_default.webp"} className="card-img-top" height="272px" alt="..."/>
                           <div className="card-body">
-                            <h5 className="card-title">Sneakers under 799rs.</h5>
+                            <h5 className="card-title"><Link className="dropdown-item" to="/sneakers">Sneakers under 799rs.</Link></h5>
                           </div>
                         </div>
                                 </div>

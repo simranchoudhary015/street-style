@@ -15,7 +15,7 @@ function Third(){
                             <div class="card">
                   <img src={"https://images.streetstylestore.com/2/5/6/6/9/3/256693.jpg"} class="card-img-top" height="272px" alt="..."/>
                   <div class="card-body">
-                    <h5 class="card-title">Black Dresses</h5>
+                    <h5 class="card-title"><Link className="dropdown-item" to="/blackdresses">Black Dresses</Link></h5>
                   </div>
                 </div>
                         </div>
@@ -31,7 +31,7 @@ function Third(){
                             <div className="card">
                   <img src={"https://images.streetstylestore.com/2/9/8/5/1/0/298510.jpg"} className="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
-                    <h5 className="card-title">Coord-sets</h5>
+                    <h5 className="card-title"><Link className="dropdown-item" to="/coodsets">Coord-sets</Link></h5>
                   </div>
                 </div>
                         </div>
@@ -55,7 +55,7 @@ function Third(){
                             <div className="card">
                   <img src={"https://cdn.streetstylestore.com/3/1/5/1/2/7/315127-sss_vertical.webp"} class="card-img-top" height="272px" alt="..."/>
                   <div class="card-body">
-                    <h5 class="card-title">Bodycon Dresses</h5>
+                    <h5 class="card-title"><Link className="nav-link" to="/bodycondresses">Bodycon Dresses</Link></h5>
                   </div>
                 </div>
                         </div>
