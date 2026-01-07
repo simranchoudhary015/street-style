@@ -84,7 +84,8 @@ function Addproducts() {
                 <option value="neckpiecesEaring">NeckpiecesEaring</option>
                 <option value="handaccessories">Handaccessories</option>
                 <option value="hairaccessories">Hairaccessories</option>
-                <option value="wintercollection">Wintercollection</option>
+                <option value="womenEthnicWear">WomenEthnicWear</option>
+                <option value="twoinone">Twoinone</option>
                 <option value="leathercollection">Leathercollection</option>
                 <option value="hoodies">Hoodies</option>
                 <option value="cordset">Cordset</option>

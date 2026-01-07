@@ -173,7 +173,9 @@ box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     list-style: none;
     
 }
-
+.fc{
+  width: 250px;
+}
 @media screen and (max-width:768px) {
     .head2{
         display: none!important;
@@ -221,6 +223,10 @@ margin-left: 50px;
     font-size: 15px;
  }
  
+ .secr{
+width: 250px;
+margin-left: 80px;
+ }
  
 }
 @media screen and (max-width:900px) {

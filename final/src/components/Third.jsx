@@ -13,7 +13,7 @@ function Third(){
              <div className="row secr gap-5">
                         <div className="col-lg-2 col-sm-6">
                             <div class="card">
-                  <img src={blackdress} class="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://images.streetstylestore.com/2/5/6/6/9/3/256693.jpg"} class="card-img-top" height="272px" alt="..."/>
                   <div class="card-body">
                     <h5 class="card-title">Black Dresses</h5>
                   </div>
@@ -21,15 +21,15 @@ function Third(){
                         </div>
                          <div className="col-lg-2 col-sm-6">
                             <div class="card">
-                  <img src={dresses} class="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://images.streetstylestore.com/2/0/8/1/7/3/208173.jpg"} class="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
-                    <h5 className="card-title">ShortDresses</h5>
+                    <h5 className="card-title"><Link className="dropdown-item" to="/dresses">ShortDresses</Link></h5>
                   </div>
                 </div>
                         </div>
                          <div className="col-lg-2 col-sm-6">
                             <div className="card">
-                  <img src={coord} className="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://images.streetstylestore.com/2/9/8/5/1/0/298510.jpg"} className="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
                     <h5 className="card-title">Coord-sets</h5>
                   </div>
@@ -37,7 +37,7 @@ function Third(){
                         </div>
                          <div className="col-lg-2 col-sm-6">
                             <div className="card">
-                  <img src={jumpsuit} className="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://images.streetstylestore.com/2/5/3/1/1/6/253116.jpg"} className="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
                     <h5 className="card-title"><Link className="dropdown-item" to="/jumpsuit">Jumpsuit</Link></h5>
                   </div>
@@ -45,7 +45,7 @@ function Third(){
                         </div>
                          <div className="col-lg-2 col-sm-6">
                             <div className="card">
-                  <img src={shorts} className="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://cdn.streetstylestore.com/2/1/9/8/6/7/219867-sss_vertical.webp"} className="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
                     <h5 className="card-title"><Link className="nav-link" to="/bottamwear">Shorts & Skirts</Link></h5>
                   </div>
@@ -53,7 +53,7 @@ function Third(){
                         </div>
                          <div className="col-lg-2 col-sm-6">
                             <div className="card">
-                  <img src={bodycon} class="card-img-top" height="272px" alt="..."/>
+                  <img src={"https://cdn.streetstylestore.com/3/1/5/1/2/7/315127-sss_vertical.webp"} class="card-img-top" height="272px" alt="..."/>
                   <div class="card-body">
                     <h5 class="card-title">Bodycon Dresses</h5>
                   </div>

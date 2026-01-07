@@ -2,7 +2,7 @@ function Header(){
     return(
         <>
         <div className="container-fluid header">
-            <div className="row head">
+            <div className="row head w-100">
                 <div className="col-lg-6 col-sm-12">
                 <p>Get up to 50% off new season styles, limited time only</p>
                 </div>

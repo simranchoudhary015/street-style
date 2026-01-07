@@ -29,9 +29,9 @@ function First(){
     speed={3000}
     loop={true}
     pagination={{clickable: true}}
-    // autoplay={{
-    //     delay: 1000,
-    // }}
+    autoplay={{
+        delay: 1000,
+    }}
     // breakpoints={{
     //     0:{slidesPerView: 1},
     //     575:{slidesPerView:1},

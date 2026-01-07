@@ -1,11 +1,11 @@
 function Footer() {
   return (
     <>
-      <div className="container-fluid foot mt-5">
+      <div className="container-fluid foot mt-4">
 
-        <div className="row ms-5 mt-5">
-            <div className="col-lg-3 col-sm-6">
-                 <div class="card fc">
+        <div className="row ms-5 mt-5 gap-5">
+            <div className="fc col-lg-3 col-sm-6" >
+                 <div class="card h-100">
       <i class="fa-regular fa-truck fa-3x"></i>
       <div class="card-body">
         <h5 class="card-title">Free Shipping </h5>
@@ -13,8 +13,8 @@ function Footer() {
       </div>
     </div>
     </div>
-            <div className="col-lg-3 col-sm-6">
-                 <div class="card fc">
+            <div className="fc col-lg-3 col-sm-6">
+                 <div class="card h-100">
       <i class="fa-solid fa-arrow-left fa-3x"></i>
       <div class="card-body">
         <h5 class="card-title">30 Days Return</h5>
@@ -22,8 +22,8 @@ function Footer() {
       </div>
     </div>
     </div>
-     <div className="col-lg-3 col-sm-6">
-                 <div class="card fc">
+     <div className="fc col-lg-3 col-sm-6">
+                 <div class="card h-100">
       <i class="fa-solid fa-money-check-dollar fa-3x"></i>
       <div class="card-body">
         <h5 class="card-title">Secured Payment</h5>
@@ -31,8 +31,8 @@ function Footer() {
       </div>
     </div>
     </div>
-     <div className="col-lg-3 col-sm-6">
-                 <div class="card fc">
+     <div className="fc col-lg-3 col-sm-6">
+                 <div class="card h-100">
       <i class="fa-regular fa-headphones fa-3x"></i>
       <div class="card-body">
         <h5 class="card-title">Support 24/7</h5>
@@ -43,7 +43,7 @@ function Footer() {
 
             </div>
 
-        <div className="row d-flex mt-5">
+        <div className="row d-flex mt-5 ms-5">
           <div className="col-lg-3 col-sm-6">
             <h2>Contact Us</h2>
             <p className="fp">

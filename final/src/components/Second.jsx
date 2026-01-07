@@ -5,6 +5,7 @@ import leather from '../assets/leather.png'
 import hoodies from '../assets/hoodies.png'
 import summer from '../assets/summer.png'
 import { Link } from 'react-router-dom'
+import './Home.css'
 function Second(){
     return(
         <>
@@ -13,23 +14,23 @@ function Second(){
             <div className="row secr gap-5">
             <div className="col-lg-2 col-sm-6">
                 <div class="card">
-      <img src={winter} class="card-img-top" height="272px" alt="..."/>
+      <img src={"https://images.streetstylestore.com/3/1/1/1/8/0/311180.jpg"} class="card-img-top" height="272px" alt="..."/>
       <div class="card-body">
-        <h5 class="card-title"><Link className="dropdown-item" to="/wintercollection">winter collection</Link></h5>
+        <h5 class="card-title"><Link className="dropdown-item" to="/womenEthnicWear">Women Ethnic Wear</Link></h5>
       </div>
     </div>
             </div>
              <div className="col-lg-2 col-sm-6">
                 <div class="card">
-      <img src={topsunder} class="card-img-top" height="272px" alt="..."/>
+      <img src={"https://images.streetstylestore.com/3/1/6/2/8/3/316283.jpg"} class="card-img-top" height="272px" alt="..."/>
       <div className="card-body">
-        <h5 className="card-title">top under &#8377;499</h5>
+        <h5 className="card-title"><Link className="dropdown-item" to="/twoinone">Set of two &#8377;1099</Link></h5>
       </div>
     </div>
             </div>
              <div className="col-lg-2 col-sm-6">
                 <div className="card">
-      <img src={leather} className="card-img-top" height="272px" alt="..."/>
+      <img src={"https://images.streetstylestore.com/3/1/2/8/6/5/312865.jpg"} className="card-img-top" height="272px" alt="..."/>
       <div className="card-body">
         <h5 className="card-title"><Link className="dropdown-item" to="/leathercollection">Leather collection</Link></h5>
       </div>
@@ -37,28 +38,28 @@ function Second(){
             </div>
              <div className="col-lg-2 col-sm-6">
                 <div className="card">
-      <img src={hoodies} className="card-img-top" height="272px" alt="..."/>
+      <img src={"https://images.streetstylestore.com/2/6/9/2/5/0/269250.jpg"} className="card-img-top" height="272px" alt="..."/>
       <div className="card-body">
-        <h5 className="card-title">Hoodies</h5>
+        <h5 className="card-title"><Link className="dropdown-item" to="/hoodies">Hoodies</Link></h5>
       </div>
     </div>
             </div>
              <div className="col-lg-2 col-sm-6">
                 <div className="card">
-      <img src={summer} className="card-img-top" height="272px" alt="..."/>
+      <img src={"https://images.streetstylestore.com/2/4/6/1/9/7/246197.jpg"} className="card-img-top" height="272px" alt="..."/>
       <div className="card-body">
         <h5 className="card-title"><Link className="dropdown-item" to="/croptop">Summer Collection</Link></h5>
       </div>
     </div>
             </div>
-             <div className="col-lg-2 col-sm-6">
+             {/* <div className="col-lg-2 col-sm-6">
                 <div className="card">
       <img src={print} class="card-img-top" height="272px" alt="..."/>
       <div class="card-body">
         <h5 class="card-title">Printed collection</h5>
       </div>
-    </div>
-            </div>
+    </div> */}
+          
 
             </div>
         </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dresses.css";
-
-function Wintercollection(){
+import { Link } from "react-router-dom";
+function WomenEthnicWear(){
     const [products, setProducts] = useState([]);
       const [selectedProduct, setSelectedProduct] = useState(null);
     
@@ -19,7 +19,7 @@ function Wintercollection(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=wintercollection"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=womenEthnicWear"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
@@ -121,4 +121,4 @@ function Wintercollection(){
     )
 
 }
-export default Wintercollection
+export default WomenEthnicWear

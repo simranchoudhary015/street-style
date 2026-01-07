@@ -142,7 +142,8 @@ function Secondheader(){
       <input className="form-control msearch" type="search" placeholder="Search" aria-label="Search" />
     </form>
     <ul>
-         <Link className="nav-link active home" aria-current="page" to="/">Home</Link>
+         
+         <Link className="nav-link active home" aria-current="page" to="/home">Home</Link>
          <Link className="nav-link" to="/dresses">Dresses</Link>
          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Topwear
