@@ -25,7 +25,7 @@ function Nav() {
           </a>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/croptop">Croptop</Link></li>
-            <li><a className="dropdown-item" href="#">Shirts & Tshirts</a></li>
+            <li><Link className="dropdown-item" to="/shirts">Shirts & Tshirts</Link></li>
             <li><Link className="dropdown-item" to="/jumpsuit">Jumpsuit</Link></li>
           </ul>
         </li>

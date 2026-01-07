@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
 function Header(){
      // State to track if menu is open
@@ -9,7 +9,14 @@ function Header(){
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+const handleLogout = () => {
+    // Clear auth data
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
 
+    // Redirect to FRONTEND login page
+    window.location.href = "https://street-style-store-web.onrender.com/";
+  };
      const [openSlides, setOpenSlides] = useState(false);
   const [openCategory, setOpenCategory] = useState(true); // default open like your image
 
@@ -34,7 +41,7 @@ function Header(){
         <Link to="/homeslides"><i class="fas fa-image"></i> Home Slides</Link>
          <Link to="/products"><i class="fas fa-box"></i>  Products</Link>
          <Link to="/orders"><i class="fa-solid fa-briefcase"></i>Orders</Link>
-        <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+        <a href="#" onClick={handleLogout}><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
           
 
       </div>

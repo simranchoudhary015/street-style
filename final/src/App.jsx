@@ -15,6 +15,7 @@ import Bags from './components/Bags.jsx'
 import Heels from './components/Heels.jsx'
 import Shoes from './components/Shoes.jsx'
 import Slipers from './components/Slipers.jsx'
+import Shirts from './components/Shirts.jsx'
 import Hairaccessories from './components/Hairaccessories.jsx'
 import NeckpiecesEaring from './components/NeckpiecesEaring.jsx'
 import Handaccessories from './components/Handaccessories.jsx'
@@ -37,6 +38,7 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/dresses' element={<Dresses />} />
             <Route path='/croptop' element={<Croptop />} />
+            <Route path='/shirts' element={<Shirts/>}/>
             <Route path='/bottamwear' element={<Bottamwear />} />
             <Route path='/jumpsuit' element={<Jumpsuit />} />
             <Route path='/bags' element={<Bags />} />

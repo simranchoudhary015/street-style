@@ -17,7 +17,7 @@ function Secondheader(){
     localStorage.removeItem("role");
 
     // Redirect to FRONTEND login page
-    window.location.href = "http://localhost:5174";
+    window.location.href = "https://street-style-store-web.onrender.com/";
   };
    // 🔍 SEARCH DATA
   const searchItems = [
