@@ -49,7 +49,7 @@ return(
           products.map((product, index) => (
             <div className="card" key={index}>
               <img
-                src={`http://localhost:5500/uploads/${product.image}`}
+                src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
                 alt={product.name}
                 width="280"
                 height="300"

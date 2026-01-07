@@ -79,7 +79,7 @@ function WomenEthnicWear(){
             <div className="row">
               <div className="col-6">
              <img
-              src={`http://localhost:5500/uploads/${selectedProduct.image}`}
+              src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
               alt={selectedProduct.name}
               width="300"
             />
