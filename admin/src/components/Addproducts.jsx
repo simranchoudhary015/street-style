@@ -73,7 +73,7 @@ function Addproducts() {
                 <option >Select category</option>
                 <option value="dresses">Dresses</option>
                 <option value="croptop">Croptop</option>
-                <option value="shirts">Shirts & tshirts</option>
+                <option value="shirts">Shirts&tshirts</option>
                 <option value="jumpsuit">jumpsuit</option>
                 <option value="bottamwear">Bottamwear</option>
                 <option value="heels">Heels</option>
