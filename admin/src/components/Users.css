@@ -20,3 +20,63 @@
 .user-list-table tr:hover {
   background-color: #f1f1f1;
 }
+@media screen and (max-width: 768px) {
+  /* HEADER ROW */
+  .orders-list-container .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .orders-list-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .breadcrumb {
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  /* TABLE TO CARD VIEW */
+  .user-list-table,
+  .user-list-table thead,
+  .user-list-table tbody,
+  .user-list-table th,
+  .user-list-table td,
+  .user-list-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .user-list-table thead {
+    display: none;
+  }
+
+  .user-list-table tr {
+    background: #fff;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .user-list-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .user-list-table td:last-child {
+    border-bottom: none;
+  }
+
+  .user-list-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+  }
+}

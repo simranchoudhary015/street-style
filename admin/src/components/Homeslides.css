@@ -21,4 +21,81 @@
 .homeslides-list-table tr:hover {
   background-color: #f1f1f1;
 }
+@media screen and (max-width: 768px) {
+  /* TOP HEADER */
+  .container-fluid {
+    padding: 16px !important;
+  }
+
+  .container-fluid > div {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start !important;
+  }
+
+  .search-input {
+    width: 100% !important;
+    height: 38px !important;
+  }
+
+  .btn-add {
+    width: 100% !important;
+    height: 38px !important;
+  }
+
+  /* TABLE → CARD VIEW */
+  .homeslides-list-table,
+  .homeslides-list-table thead,
+  .homeslides-list-table tbody,
+  .homeslides-list-table th,
+  .homeslides-list-table td,
+  .homeslides-list-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .homeslides-list-table thead {
+    display: none;
+  }
+
+  .homeslides-list-table tr {
+    background: #fff;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .homeslides-list-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .homeslides-list-table td:last-child {
+    border-bottom: none;
+  }
+
+  .homeslides-list-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+  }
+
+  .homeslides-list-table img {
+    width: 70px;
+    height: auto;
+  }
+
+  .delete-btn {
+    color: #e74c3c;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
 

@@ -2,3 +2,62 @@
 .btn-add{
     background-color: #ff8fa3;
 }
+
+
+@media screen and (max-width: 768px) {
+  .orders-list-table,
+  .orders-list-table thead,
+  .orders-list-table tbody,
+  .orders-list-table th,
+  .orders-list-table td,
+  .orders-list-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .orders-list-table thead {
+    display: none;
+  }
+
+  .orders-list-table tr {
+    background: #fff;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .orders-list-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+  }
+
+  .orders-list-table td:last-child {
+    border-bottom: none;
+  }
+
+  .orders-list-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .orders-list-table img {
+    width: 70px;
+    height: auto;
+  }
+
+  .delete-btn {
+    color: #e74c3c;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+

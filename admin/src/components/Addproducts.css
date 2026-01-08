@@ -117,3 +117,56 @@ label {
     margin-right: 8px;
 }
 
+@media screen and (max-width: 768px) {
+  /* FORM WRAPPER */
+  form {
+    padding: 10px;
+  }
+
+  .product-form {
+    padding: 18px;
+  }
+
+  /* GRID → STACK */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* FULL WIDTH INPUTS */
+  .input,
+  .textarea,
+  select {
+    width: 100%;
+  }
+
+  /* LOCATION SELECT */
+  select[name="location"] {
+    margin-top: 12px;
+  }
+
+  /* MEDIA SECTION */
+  .media-section {
+    padding: 18px;
+  }
+
+  .media-section h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* UPLOAD BOX CENTER */
+  .upload-box {
+    width: 100%;
+    height: 180px;
+    margin: auto;
+  }
+
+  /* PUBLISH BUTTON */
+  .publish-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 15px;
+  }
+}

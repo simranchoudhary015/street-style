@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import './Header.css'
 function Header(){
      // State to track if menu is open
   const [isOpen, setIsOpen] = useState(false);

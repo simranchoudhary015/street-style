@@ -75,7 +75,7 @@ const Cart = () => {
   return (
     <div className="container cart-page">
       <h2 className="cart-title">Shopping Cart</h2>
-
+      <hr />
       <div className="cart-layout">
         {/* LEFT SIDE – PRODUCTS */}
         <div className="cart-left">

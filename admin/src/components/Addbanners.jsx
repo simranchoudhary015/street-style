@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import './Addproducts.css'
 function Addbanners() {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState("");
@@ -53,15 +53,15 @@ function Addbanners() {
       <div
         onClick={handleBoxClick}
         style={{
-          width: "220px",
-          height: "220px",
-          border: "2px dashed #aaa",
-          borderRadius: "10px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          cursor: "pointer",
-        }}
+                width: "220px",
+                height: "220px",
+                border: "2px dashed #aaa",
+                borderRadius: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
       >
         <input
           type="file"
@@ -74,10 +74,15 @@ function Addbanners() {
           <img
             src={preview}
             alt="preview"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "10px",
+                      objectFit: "cover",
+                    }}
           />
         ) : (
-          <p>Click to upload image</p>
+          <p style={{ opacity: 0.7 }}>Click to Upload Image</p>
         )}
       </div>
 
@@ -91,7 +96,7 @@ function Addbanners() {
         />
       </div>
 
-      <button type="submit">Upload Banner</button>
+      <button type="submit" className="publish-btn">Upload Banner</button>
     </form>
   );
 }
