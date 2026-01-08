@@ -135,14 +135,14 @@
   grid-template-columns: repeat(2, 1fr); /* 4 columns */
 }
 .sell{
-  height: 400px;
+  height: 300px;
 }
 .sell img{
 width: 100%;
 height: 250px;
 }
 .sell p{
-  font-size: 15px;
+  font-size: 12px;
 }
 .imgarea{
   width: 30%;
@@ -197,7 +197,7 @@ font-size: 12px;
    margin-bottom: 5px;
 }
 .cancelb{
-  margin-left: 240px;
+  margin-left: 220px;
   margin-bottom: 2px;
  color: #fb6f92;
  border: #ff3f6c;

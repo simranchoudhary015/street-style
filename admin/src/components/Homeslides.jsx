@@ -62,7 +62,7 @@ function Homeslides(){
                 <td>{index + 1}</td>
                 <td>
   <img
-    src={`http://localhost:5500/uploads/${banners.image}`}
+    src={`https://street-style-shop-server.onrender.com/uploads/${banners.image}`}
     alt="banner"
     width="80"
     height="50"

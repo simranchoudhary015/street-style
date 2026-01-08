@@ -34,7 +34,7 @@ function Addbanners() {
     formData.append("discount", discount); // ✅ append discount from state
 
     try {
-      const res = await fetch("http://localhost:5500/api/banner/upload-image", {
+      const res = await fetch("https://street-style-shop-server.onrender.com/api/banner/upload-image", {
         method: "POST",
         body: formData,
       });
