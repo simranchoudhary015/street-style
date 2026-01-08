@@ -58,11 +58,11 @@ function Secondheader(){
        </div>
        <img src={logo1} className="sslogo" alt="" height="120px" width="150px"/>
        <div className='scart'>
-        <ul className='d-flex gap-3'>
-         <li><Link to="/cart" class="position-relative cart ms-3 mt-2">
+        <ul className='d-flex gap-3 me-3'>
+         <li><Link to="/cart" class="position-relative cart mt-2">
   <i class="fa-solid fa-cart-shopping fa-xl"></i><span>{cart.length}</span></Link>
 </li>
- <li><Link to="/wishlist" class="position-relative cart ms-2 mt-2">
+ <li><Link to="/wishlist" class="position-relative cart mt-2">
  <i class="fa-solid fa-heart fa-xl"></i><span>{wishlist.length}</span></Link>
 </li>
  </ul>
