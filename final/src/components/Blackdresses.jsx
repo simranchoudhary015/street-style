@@ -49,7 +49,7 @@ function Blackdresses() {
       <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
-            <div className="card" key={index}>
+            <div className="card sell" key={index}>
               <img
                 src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
                 alt={product.name}
@@ -91,18 +91,18 @@ function Blackdresses() {
       {/* MODAL */}
       {selectedProduct && (
         <div className="modal-overlay">
-          <div className="modal-content">
-            <div className="row">
-              <div className="col-sm-12 col-lg-6">
+          <div className="modal-content model">
+            <div className="row divide">
+              <div className="imgarea col-sm-3 col-lg-6">
                 <img
-                  src={`http://localhost:5500/uploads/${selectedProduct.image}`}
+                  src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
                   alt={selectedProduct.name}
                   width="300"
                 />
               </div>
 
-              <div className="col-sm-12 col-lg-6">
-                <button className="close-btn" onClick={closeProduct}>
+              <div className="writenarea col-sm-9 col-lg-6">
+                <button className="close-btn cancelb" onClick={closeProduct}>
                   ✖
                 </button>
 
@@ -125,11 +125,11 @@ function Blackdresses() {
                     ({selectedProduct.discount}%)
                   </small>
                 </div>
-
+                <div className="tax">
                 <small>inclusive of all taxes</small>
-
+               
                 <hr />
-
+              </div>
                 <h6>SELECT SIZE</h6>
 
                 <div className="size-grid">

@@ -16,7 +16,7 @@ return (
 wishlist.map((item, index) => (
 <div className="wishlist-item" key={index}>
 <img
-src={`http://localhost:5500/uploads/${item.image}`}
+src={`https://street-style-shop-server.onrender.com/uploads/${item.image}`}
 width="100"
 alt={item.name}
 />

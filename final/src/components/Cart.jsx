@@ -85,7 +85,7 @@ const Cart = () => {
             return (
               <div className="cart-item" key={item._id}>
                 <img
-                  src={`http://localhost:5500/uploads/${item.productId.image}`}
+                  src={`https://street-style-shop-server.onrender.com/uploads/${item.productId.image}`}
                   alt={item.productId.name}
                   className="cart-img"
                 />

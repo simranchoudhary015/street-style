@@ -34,12 +34,11 @@ function Leathercollection(){
         <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
-            <div className="card" key={index}>
+            <div className="card sell" key={index}>
               <img
                 src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
                 alt={product.name}
-                width="280"
-                height="300"
+                className="pimg"
                 onClick={() => openProduct(product)}
                 style={{ cursor: "pointer" }}
               />
@@ -59,7 +58,9 @@ function Leathercollection(){
                     <span className="oldp">₹{product.oldPrice}</span>
                   )}
                   {product.discount && (
-                    <small className="smalltext">({product.discount}%)</small>
+                    <small className="smalltext">
+                      ({product.discount}%)
+                    </small>
                   )}
                 </p>
               </div>
@@ -67,53 +68,92 @@ function Leathercollection(){
           ))
         ) : (
           <p style={{ textAlign: "center", marginTop: "50px" }}>
-            No products found
+            No dresses found
           </p>
         )}
       </div>
 
-      {/* Modal */}
+      {/* MODAL */}
       {selectedProduct && (
         <div className="modal-overlay">
-          <div className="modal-content">
-            <div className="row">
-              <div className="col-6">
-             <img
-              src={`http://localhost:5500/uploads/${selectedProduct.image}`}
-              alt={selectedProduct.name}
-              width="300"
-            />
+          <div className="modal-content model">
+            <div className="row divide">
+              <div className="imgarea col-sm-3 col-lg-6">
+                <img
+                  src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
+                  alt={selectedProduct.name}
+                  width="300"
+                />
               </div>
-              <div className="col-6">
-                <button className="close-btn" onClick={closeProduct}>
-              ✖
-            </button>
-            <h3>{selectedProduct.name}</h3>
-            <p>{selectedProduct.description}</p>
-            <p className="ratings">{selectedProduct.rating}<span className="pink-star">★</span> | 8.9k Ratings</p>
-            <hr />
-           <div className="p d-flex gap-2"><h4>₹{selectedProduct.price}</h4> <p className="oldp">MRP ₹{selectedProduct.oldPrice}</p> <small className="smalltext">({selectedProduct.discount}%)</small></div> 
-             <small>inclusive of all taxes</small>
-             <hr />
-             <h6>SELECT SIZE</h6>
-             <div className="size-grid">
-          {selectedProduct.size?.split(",").map((s, i) => (
-            <button key={i} className="size-btn">{s}</button>
-          ))}
-        </div>
-             <div className="action-buttons">
-          <button className="wishlist-btn" onClick={() => addToWishlist(selectedProduct)}>
-            🤍 Wishlist
-          </button>
 
-          <button className="cart-btn" onClick={() => addToCart(selectedProduct)}>
-            Add to Cart
-          </button>
-        </div>
-            </div>
-            </div>
+              <div className="writenarea col-sm-9 col-lg-6">
+                <button className="close-btn cancelb" onClick={closeProduct}>
+                  ✖
+                </button>
 
-          
+                <h3>{selectedProduct.name}</h3>
+                <p>{selectedProduct.description}</p>
+
+                <p className="ratings">
+                  {selectedProduct.rating}
+                  <span className="pink-star">★</span> | 8.9k Ratings
+                </p>
+
+                <hr />
+
+                <div className="p d-flex gap-2">
+                  <h4>₹{selectedProduct.price}</h4>
+                  <p className="oldp">
+                    MRP ₹{selectedProduct.oldPrice}
+                  </p>
+                  <small className="smalltext">
+                    ({selectedProduct.discount}%)
+                  </small>
+                </div>
+                <div className="tax">
+                <small>inclusive of all taxes</small>
+               
+                <hr />
+              </div>
+                <h6>SELECT SIZE</h6>
+
+                <div className="size-grid">
+                  {selectedProduct.size?.split(",").map((s, i) => (
+                    <button
+                      key={i}
+                      className={`size-btn ${
+                        selectedSize === s ? "active" : ""
+                      }`}
+                      onClick={() => setSelectedSize(s)}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="action-buttons">
+                  <button
+                    className="wishlist-btn"
+                    onClick={() => addToWishlist(selectedProduct)}
+                  >
+                    🤍 Wishlist
+                  </button>
+
+                  <button
+                    className="cart-btn"
+                    onClick={handleAddToCart}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+
+                {!selectedSize && (
+                  <p className="size-warning">
+                    Please select a size
+                  </p>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       )}

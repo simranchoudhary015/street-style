@@ -42,15 +42,14 @@ function Hairaccessories() {
 
   return (
     <>
-      <div className="products-container">
+       <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
-            <div className="card" key={index}>
+            <div className="card sell" key={index}>
               <img
                 src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
                 alt={product.name}
-                width="280"
-                height="300"
+                className="pimg"
                 onClick={() => openProduct(product)}
                 style={{ cursor: "pointer" }}
               />
@@ -88,18 +87,18 @@ function Hairaccessories() {
       {/* ✅ MODAL */}
       {selectedProduct && (
         <div className="modal-overlay">
-          <div className="modal-content">
-            <div className="row">
-              <div className="col-6">
+          <div className="modal-content model">
+            <div className="row divide">
+              <div className="imgarea col-sm-3 col-lg-6">
                 <img
-                  src={`http://localhost:5500/uploads/${selectedProduct.image}`}
+                  src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
                   alt={selectedProduct.name}
                   width="300"
                 />
               </div>
 
-              <div className="col-6">
-                <button className="close-btn" onClick={closeProduct}>
+              <div className="writenarea col-sm-3 col-lg-6">
+                <button className="close-btn cancelb" onClick={closeProduct}>
                   ✖
                 </button>
 
@@ -108,18 +107,21 @@ function Hairaccessories() {
 
                 <hr />
 
-                <div className="d-flex gap-2">
+                <div className="p d-flex gap-2">
                   <h4>₹{selectedProduct.price}</h4>
                   {selectedProduct.oldPrice && (
                     <p className="oldp">
                       ₹{selectedProduct.oldPrice}
                     </p>
                   )}
+                  <small className="smalltext">
+                    ({selectedProduct.discount}%)
+                  </small>
                 </div>
-
+              <div className="tax">
                 <small>inclusive of all taxes</small>
                 <hr />
-
+               </div>
                 <div className="action-buttons">
                   <button
                     className="wishlist-btn"
