@@ -24,7 +24,7 @@ function Sneakers(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=slipers"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=sneakers"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
