@@ -58,7 +58,7 @@ function Secondheader(){
        </div>
        <img src={logo1} className="sslogo" alt="" height="120px" width="150px"/>
        <div className='scart'>
-        <ul className='d-flex gap-4'>
+        <ul className='d-flex gap-3'>
          <li><Link to="/cart" class="position-relative cart ms-3 mt-2">
   <i class="fa-solid fa-cart-shopping fa-xl"></i><span>{cart.length}</span></Link>
 </li>

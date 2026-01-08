@@ -12,7 +12,7 @@ connectDB();
 const app = express();
 
 const corsOptions={
-  origin:["https://street-style-store-web.onrender.com","https://street-style-admin.onrender.com"],
+  origin:["https://street-style-store-web.onrender.com","https://street-style-admin.onrender.com","http://localhost:5173","http://localhost:5174"],
   methods:"GET,POST,PUT,DELETE",
   credentials:true
 }

@@ -133,15 +133,67 @@
 @media (max-width: 576px) {
   .products-container {
   grid-template-columns: repeat(2, 1fr); /* 4 columns */
-  gap: 20px;
-  padding: 20px;
 }
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 80%;
-  height: 100%;
+.sell img{
+width: 100%;
+}
+.imgarea{
+  width: 30%;
+}
+.writenarea{
+  width: 70%;
+}
+.divide{
+  display: flex;
+  flex-direction: row;
+}
+.model{
+  height: 80%;
+}
+.model img{
+  height: 200px;
+  width: 100px;
+}
+.model h3{
+  font-size: 10px;
+}
+.model p{
+  font-size: 12px;
+}
+.ratings{
+  /* height: 5px;
+  font-size: 4px;
+  margin-bottom: 5px; */
+  display: none;
+}
+.p h4{
+font-size: 12px;
+}
+.p small{
+  font-size: 10px;
+}
+.p p{
+  font-size: 10px;
+}
+.tax{
+  display: none;
+}
+.model h6{
+  font-size: 9px;
+}
+.size-grid{
+  height: 10px;
+  font-size: 9px;
+}
+.action-buttons button{
+  font-size: 10px;
+   margin-bottom: 5px;
+}
+.cancelb{
+  margin-left: 240px;
+  margin-bottom: 2px;
+ color: #fb6f92;
+ border: #ff3f6c;
 }
 }
 
