@@ -2,18 +2,24 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dresses.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 function WomenEthnicWear(){
     const [products, setProducts] = useState([]);
-      const [selectedProduct, setSelectedProduct] = useState(null);
-    
-      const openProduct = (product) => {
-        setSelectedProduct(product);
-      };
-    
-      const closeProduct = () => {
-        setSelectedProduct(null);
-      };
-    
+    const [selectedProduct, setSelectedProduct] = useState(null);
+   const [selectedSize, setSelectedSize] = useState(null);
+    const { addToCart, addToWishlist } = useCart();
+  
+    const openProduct = (product) => {
+      setSelectedProduct(product);
+      setSelectedSize(null); // reset size when modal opens
+    };
+  
+    const closeProduct = () => {
+      setSelectedProduct(null);
+      setSelectedSize(null);
+    };
+  
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,8 +35,19 @@ function WomenEthnicWear(){
 
     fetchProducts();
   }, []);
+   const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+   addToCart(selectedProduct, selectedSize, 1);
+
+    closeProduct();
+  };
     return(
         <>
+        
        <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (

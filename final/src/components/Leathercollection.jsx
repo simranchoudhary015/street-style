@@ -1,37 +1,52 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dresses.css";
-
+import { useCart } from "../context/CartContext";
 function Leathercollection(){
     const [products, setProducts] = useState([]);
-      const [selectedProduct, setSelectedProduct] = useState(null);
-    
-      const openProduct = (product) => {
-        setSelectedProduct(product);
-      };
-    
-      const closeProduct = () => {
-        setSelectedProduct(null);
-      };
+    const [selectedProduct, setSelectedProduct] = useState(null);
+   const [selectedSize, setSelectedSize] = useState(null);
+    const { addToCart, addToWishlist } = useCart();
   
-    
-      useEffect(() => {
-        const fetchProducts = async () => {
-          try {
-            const response = await axios.get(
-              "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=leathercollection"
-            );
-            setProducts(response.data.addproducts);
-          } catch (error) {
-            console.error("Error fetching products:", error);
-          }
-        };
-    
-        fetchProducts();
-      }, []);
+    const openProduct = (product) => {
+      setSelectedProduct(product);
+      setSelectedSize(null); // reset size when modal opens
+    };
+  
+    const closeProduct = () => {
+      setSelectedProduct(null);
+      setSelectedSize(null);
+    };
+  
+  
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=leathercollection"
+        );
+        setProducts(response.data.addproducts);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+   const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+   addToCart(selectedProduct, selectedSize, 1);
+
+    closeProduct();
+  };
     return(
         <>
-        <div className="products-container">
+       <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
             <div className="card sell" key={index}>

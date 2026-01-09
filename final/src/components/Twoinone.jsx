@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dresses.css";
+import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 function Twoinone(){
-    const [products, setProducts] = useState([]);
-      const [selectedProduct, setSelectedProduct] = useState(null);
-    
-      const openProduct = (product) => {
-        setSelectedProduct(product);
-      };
-    
-      const closeProduct = () => {
-        setSelectedProduct(null);
-      };
-    
+   const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+   const [selectedSize, setSelectedSize] = useState(null);
+    const { addToCart, addToWishlist } = useCart();
+  
+    const openProduct = (product) => {
+      setSelectedProduct(product);
+      setSelectedSize(null); // reset size when modal opens
+    };
+  
+    const closeProduct = () => {
+      setSelectedProduct(null);
+      setSelectedSize(null);
+    };
+  
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,9 +35,19 @@ function Twoinone(){
 
     fetchProducts();
   }, []);
+   const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+   addToCart(selectedProduct, selectedSize, 1);
+
+    closeProduct();
+  };
     return(
         <>
-      <div className="products-container">
+     <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
             <div className="card sell" key={index}>

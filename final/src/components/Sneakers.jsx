@@ -46,7 +46,7 @@ function Sneakers(){
   };
     return(
         <>
-        <div className="products-container">
+       <div className="products-container">
         {products.length > 0 ? (
           products.map((product, index) => (
             <div className="card sell" key={index}>
