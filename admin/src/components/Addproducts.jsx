@@ -92,7 +92,6 @@ function Addproducts() {
                 <option value="coordsets">Coordsets</option>
                 <option value="shorts">Shorts</option>
                 <option value="bodycondresses">Bodycondresses</option>
-                <option value="sneakers">Sneakers</option>
               </select>
             </div>
 
