@@ -31,7 +31,7 @@ function Third(){
                             <div className="card">
                   <img src={"https://images.streetstylestore.com/2/9/8/5/1/0/298510.jpg"} className="card-img-top" height="272px" alt="..."/>
                   <div className="card-body">
-                    <h5 className="card-title"><Link className="dropdown-item" to="/coodsets">Coord-sets</Link></h5>
+                    <h5 className="card-title"><Link className="dropdown-item" to="/coordsets">Coord-sets</Link></h5>
                   </div>
                 </div>
                         </div>

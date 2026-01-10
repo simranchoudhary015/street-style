@@ -23,7 +23,7 @@ function Coordsets() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=coodsets"
+          "https://street-style-shop-server.onrender.com/api/product/fetchproducts?category=coordsets"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
@@ -87,7 +87,6 @@ function Coordsets() {
           </p>
         )}
       </div>
-
       {/* MODAL */}
       {selectedProduct && (
         <div className="modal-overlay">
