@@ -24,7 +24,7 @@ function Sneakers(){
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://street-style-shop-server.onrender.com/product/fetchproducts?category=sneaker"
+          "http://localhost:5500/product/fetchproducts?category=sneakers"
         );
         setProducts(response.data.addproducts);
       } catch (error) {
@@ -51,7 +51,7 @@ function Sneakers(){
           products.map((product, index) => (
             <div className="card sell" key={index}>
               <img
-                src={`https://street-style-shop-server.onrender.com/uploads/${product.image}`}
+                src={`http://localhost:5500/uploads/${product.image}`}
                 alt={product.name}
                 className="pimg"
                 onClick={() => openProduct(product)}
@@ -95,7 +95,7 @@ function Sneakers(){
             <div className="row divide">
               <div className="imgarea col-sm-3 col-lg-6">
                 <img
-                  src={`https://street-style-shop-server.onrender.com/uploads/${selectedProduct.image}`}
+                  src={`http://localhost:5500/uploads/${selectedProduct.image}`}
                   alt={selectedProduct.name}
                   width="300"
                 />

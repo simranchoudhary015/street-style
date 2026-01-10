@@ -20,7 +20,7 @@ function Addproducts() {
     const formData = new FormData(formRef.current);  
 
     const response = await axios.post(
-      "https://street-style-shop-server.onrender.com/api/product/add-product",
+      "http://localhost:5500/api/product/add-product",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -78,7 +78,7 @@ function Addproducts() {
                 <option value="bottamwear">Bottamwear</option>
                 <option value="heels">Heels</option>
                 <option value="shoes">Shoes</option>
-                <option value="sneaker">Sneaker</option>
+                <option value="sneakers">Sneakers</option>
                 <option value="slipers">Slipers</option>
                 <option value="bags">Bags</option>
                 <option value="neckpiecesEaring">NeckpiecesEaring</option>
